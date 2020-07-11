@@ -1,0 +1,54 @@
+%%% Observed functionalities in the experiment :- %%%
+
+1.On Clicking Introduction tab - It will be redirect to Introduction.html
+   
+    After clicking on the introduction button it will display the information about how
+the sentence become an complex.
+
+2.On Clicking Theory tab  - It will be redirect to theory.html
+  
+    it will display some rules of english grammar about different types of sentence.
+
+3.On Clicking Objective tab - It will be redirect to Objective.html
+   
+  The main objective of expirement is how to form logically correct sentence.
+
+4.On Clicking experiment tab - It will beredirect to Experiment.html
+  
+   A dropdown field will display it consists of two options - English/Hindi
+  
+   if selected(ENGLISH)
+       1.A text is appeared "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+       2.Contains buttons of jumbled words.
+     ON CLICKING(1 or more words)
+        i)The button you selected will be disappeared and it shows the content of buton below.
+        ii)After selecting all buttons there will be a button called "Re-form the sentence" to reset the words you selected.
+        iii)And also one another button called "Check the correctness of the sentence"
+          ON CLICKING (Check the correctness of the sentence)
+            if('SENTENCE IS CORRECT')
+                'Right answer!!!' is appeared in green text.
+            if('SENTENCE IS WRONG')
+               'Wrong answer!!!' is appeared in red color
+         iv)Below there is a button called 'Get Correct sentence'
+                It will display all the correct answers
+         v)And toggled button is there 'hide the correct answers'
+             On Click
+                  it will hide the all list of correct answers.
+     if selected(HINDI)
+          same funtionalities as above English.
+%%% FUNCTIONALITY to be added in EXPERIMENT tab %%%
+    i)It will be better to generate new random question in same language after solving the question if 
+       it is corrected.
+ 
+5.On Clicking Quizzes tab - It will be redirect to quizzes.html
+      i)It will display a question
+%%%  FUNCTIONALITY to be added in QUIZZES tab %%%
+     i)selection of options is to be done among the options displayed to evaluate correct answer.
+     ii)Quiz tab should placed at last.
+
+6.On Clicking Procedure tab - It will be redirect to procedure.html
+   i)It will display  step-by-step procedure of the experiment
+
+%%% FUNCTIONALITY to be added in PROCEDURE tab %%%
+    i)Procedure tab to be place before the Experiment tab for better uderstanding of the user. 
+   
