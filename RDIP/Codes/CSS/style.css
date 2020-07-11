@@ -1,0 +1,28 @@
+p{
+    font-weight:bold;
+    font-size:35px;
+    margin-left:6px;
+}
+select{
+    margin-left:550px;
+    width:190px;
+    text-align:center;
+    padding:1px 9px 1px 3px;
+    margin-top:50px;
+    outline:none;
+    height:25px;
+}
+#intro{
+    color:blue;
+    font-size:26px;
+    margin-left:190px;
+    margin-top:90px;
+    
+}
+#button-select{
+    margin-left:500px;
+   
+    font-size:19px;
+    color:navy;
+    font-weight:lighter;
+}
