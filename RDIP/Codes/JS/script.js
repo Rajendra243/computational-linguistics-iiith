@@ -1,12 +1,10 @@
 function select(){
     var language = document.getElementById("select-lang").value;
-    if(language=='english'|| language=='hindi')
+    
+    if(language==='english')
     {
         document.getElementById("intro").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words";
         document.getElementById('button-select').innerHTML="(select the buttons in proper order)";
-    }
-    if(language=='english')
-    {
         var e1 = ['John ate an apple before afternoon',
         'before afternoon John ate an apple',
         'John before afternoon ate an apple'
@@ -44,12 +42,27 @@ function select(){
                              'I‌ ‌bought‌ ‌a‌ ‌book‌ ‌yesterday‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌',
                              'yesterday‌ ‌I‌ ‌bought‌ ‌a‌ ‌book‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌'];
         
-        var all = [english1,english2,english3,english4,english5,english6,english7,english8,english9,english10];
+        var all = [e1,e2,e3,e4,e5,e6,e7,e8,e9,e10];
+       
+        var englishsentence=all[Math.floor(Math.random()*all.length)];
+        var randomcorrect=englishsentence[Math.floor(Math.random()*englishsentence.length)];
+        var words=randomcorrect.split(" ");
+        var i=0;
+        
+        for(i=0;i<words.length;i++)
+        {
+            document.getElementById('jumbled-buttons').innerHTML +="<button type='buttton' id='btn'>"+words[i]+"</button>"
+        }
+        
 
 
     }
-    if(language=='hindi')
+    if(language==='hindi')
     {
+        
+        document.getElementById("intro").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words";
+        document.getElementById('button-select').innerHTML="(select the buttons in proper order)";
+           
         var h1 = ['राम‌ ‌और‌ ‌श्याम‌ ‌बाजार‌ ‌गयें‌',
                         'राम‌ ‌और‌ ‌श्याम‌ ‌गयें‌ ‌बाजार‌',
                         'बाजार‌ ‌गयें‌ ‌राम‌ ‌और‌ ‌श्याम‌',
@@ -97,12 +110,17 @@ function select(){
                         '‌है‌ ‌वहाँ‌ ‌एक‌ ‌बड़ी‌ ‌सी‌ ‌किताब‌',
                         'है‌ ‌वहाँ‌ ‌बड़ी‌ ‌सी‌ ‌एक‌ ‌किताब‌'];
        
-            var allh = [hindi1,hindi2,hindi3,hindi4,hindi5,hindi6,hindi7];
-
-
+            var allh = [h1,h2,h3,h4,h5,h6,h7];
+            var hindisentence=allh[Math.floor(Math.random()*allh.length)];
+            var selectone=hindisentence[Math.floor(Math.random()*hindisentence.length)];
+            var wordsh=selectone.split(" ");
+            var k=0;
+            for(k=0;k<wordsh.length;k++)
+            {
+                document.getElementById('jumbled-buttons').innerHTML +="<button type='buttton' id='btn'>"+wordsh[k]+"</button>"
                
+            }
+
     }
-    else{
-        alert("please choose one");
-    }
+    
 }
