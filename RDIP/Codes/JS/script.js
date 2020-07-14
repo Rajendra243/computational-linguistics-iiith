@@ -51,7 +51,15 @@ function select(){
         
         for(i=0;i<words.length;i++)
         {
-            document.getElementById('jumbled-buttons').innerHTML +="<button type='buttton' id='btn'>"+words[i]+"</button>"
+            document.getElementById("jumbled-buttons").innerHTML += "<button type='button ' class='btn' id='btn"+i+"' value='"+words[i]+"' onclick='fun(this.id,this.value);'>"+words[i]+"</button>";
+             
+            //emptying the string data while switching between languages(english/hindi)
+                document.getElementById("formed-sentence").innerHTML=" ";
+                document.getElementById("selectedWo").innerHTML =" ";
+                
+
+
+
         }
         
 
@@ -117,10 +125,24 @@ function select(){
             var k=0;
             for(k=0;k<wordsh.length;k++)
             {
-                document.getElementById('jumbled-buttons').innerHTML +="<button type='buttton' id='btn'>"+wordsh[k]+"</button>"
+                document.getElementById("jumbled-buttons").innerHTML += "<button type='button' class='btn' id='btn' value='"+wordsh[k]+"' onclick='fun(this.id,this.value);'>"+wordsh[k]+"</button>";
+                document.getElementById("formed-sentence").innerHTML=" ";
+                
                
             }
 
     }
     
+}
+function fun(bid,bvalue)
+{
+    document.getElementById("formed-sentence").innerHTML="Formed Sentence <span>(after selecting words):</span>";
+    
+
+    
+    document.getElementById("selectedWo").innerHTML +="   "+bvalue;
+    document.getElementById(bid).style.display="none";
+    
+     
+  
 }
