@@ -1,4 +1,6 @@
 var reformbuttons;
+let count_words=0;
+let c=0;
 function select(){
     var language = document.getElementById("select-lang").value;
     
@@ -44,20 +46,22 @@ function select(){
                              'yesterday‌ ‌I‌ ‌bought‌ ‌a‌ ‌book‌ ‌that‌ ‌I‌ ‌told‌ ‌her‌'];
         
         var all = [e1,e2,e3,e4,e5,e6,e7,e8,e9,e10];
+        document.getElementById("formed-sentence").innerHTML=" ";
+        document.getElementById("selectedWo").innerHTML =" ";
+        document.getElementById('reformbutton').innerHTML=" ";
        
         var englishsentence=all[Math.floor(Math.random()*all.length)];
         var randomcorrect=englishsentence[Math.floor(Math.random()*englishsentence.length)];
         var englishwords=randomcorrect.split(" ");
         var i=0;
-        
+        c=0;
+        count_words=englishwords.length;
         for(i=0;i<englishwords.length;i++)
         {
             document.getElementById("jumbled-buttons").innerHTML += "<button type='button ' class='btn' id='btn"+i+"' value='"+englishwords[i]+"' onclick='fun(this.id,this.value);'>"+englishwords[i]+"</button>";
              
            
-                document.getElementById("formed-sentence").innerHTML=" ";
-                document.getElementById("selectedWo").innerHTML =" ";
-                document.getElementById('reformbutton').innerHTML=" ";
+              
 
 
 
@@ -125,6 +129,8 @@ function select(){
             var selectone=hindisentence[Math.floor(Math.random()*hindisentence.length)];
             var hindiwords=selectone.split(" ");
             var k=0;
+            c=0;
+            count_words=hindiwords.length;
             for(k=0;k<hindiwords.length;k++)
             {
                 document.getElementById("jumbled-buttons").innerHTML += "<button type='button' class='btn' id='btn"+k+"' value='"+hindiwords[k]+"' onclick='fun(this.id,this.value);'>"+hindiwords[k]+"</button>";
@@ -137,12 +143,26 @@ function select(){
     }
     
 }
+var sentence;
 function fun(bid,bvalue)
-{
+{   
+   
      document.getElementById("formed-sentence").innerHTML="Formed Sentence <span>(after selecting words):</span>";
      document.getElementById("selectedWo").innerHTML +=" "+bvalue;
+     c++;
      document.getElementById(bid).style.display="none";
      document.getElementById('reformbutton').innerHTML="<button type='button' class='reform' onclick='reset()' id='reform'>Reform the sentence</button>"
+     
+    
+     if(count_words==c)
+     {
+        
+        document.getElementById("check").innerHTML="<button type='button' id='checkcorrect'>check the correctness of sentence</button>";
+        sentence=document.getElementById('selectedWo').innerHTML;
+     }
+     else{
+         document.getElementById('check').innerHTML=" ";
+     }
     
 }
 function reset(){
@@ -150,4 +170,6 @@ function reset(){
     document.getElementById('formed-sentence').style.display="none";
     document.getElementById('selectedWo').style.display="none";
     document.getElementById('reformbutton').style.display="none";
+    c=0;
+    document.getElementById("check").innerHTML="";
 }

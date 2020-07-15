@@ -66,3 +66,18 @@ span{
 #reform{
     margin-left:650px;
 }
+#checkcorrect{
+    text-align: center;
+    height:25px;
+    width:250px;
+    outline:none;
+    margin-left:620px;
+    font-weight:lighter;
+    text-align:center;
+    border:1px solid grey;
+    cursor:pointer;
+
+}
+#checkcorrect:hover{
+    background-color: lightgray;
+}
