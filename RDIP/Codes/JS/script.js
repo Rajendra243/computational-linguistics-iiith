@@ -1,3 +1,4 @@
+var reformbuttons;
 function select(){
     var language = document.getElementById("select-lang").value;
     
@@ -46,22 +47,23 @@ function select(){
        
         var englishsentence=all[Math.floor(Math.random()*all.length)];
         var randomcorrect=englishsentence[Math.floor(Math.random()*englishsentence.length)];
-        var words=randomcorrect.split(" ");
+        var englishwords=randomcorrect.split(" ");
         var i=0;
         
-        for(i=0;i<words.length;i++)
+        for(i=0;i<englishwords.length;i++)
         {
-            document.getElementById("jumbled-buttons").innerHTML += "<button type='button ' class='btn' id='btn"+i+"' value='"+words[i]+"' onclick='fun(this.id,this.value);'>"+words[i]+"</button>";
+            document.getElementById("jumbled-buttons").innerHTML += "<button type='button ' class='btn' id='btn"+i+"' value='"+englishwords[i]+"' onclick='fun(this.id,this.value);'>"+englishwords[i]+"</button>";
              
-            //emptying the string data while switching between languages(english/hindi)
+           
                 document.getElementById("formed-sentence").innerHTML=" ";
                 document.getElementById("selectedWo").innerHTML =" ";
-                
+                document.getElementById('reformbutton').innerHTML=" ";
 
 
 
         }
         
+       reformbuttons=document.getElementById('jumbled-buttons').innerHTML;
 
 
     }
@@ -121,28 +123,31 @@ function select(){
             var allh = [h1,h2,h3,h4,h5,h6,h7];
             var hindisentence=allh[Math.floor(Math.random()*allh.length)];
             var selectone=hindisentence[Math.floor(Math.random()*hindisentence.length)];
-            var wordsh=selectone.split(" ");
+            var hindiwords=selectone.split(" ");
             var k=0;
-            for(k=0;k<wordsh.length;k++)
+            for(k=0;k<hindiwords.length;k++)
             {
-                document.getElementById("jumbled-buttons").innerHTML += "<button type='button' class='btn' id='btn' value='"+wordsh[k]+"' onclick='fun(this.id,this.value);'>"+wordsh[k]+"</button>";
+                document.getElementById("jumbled-buttons").innerHTML += "<button type='button' class='btn' id='btn"+k+"' value='"+hindiwords[k]+"' onclick='fun(this.id,this.value);'>"+hindiwords[k]+"</button>";
                 document.getElementById("formed-sentence").innerHTML=" ";
-                
+                document.getElementById('reformbutton').innerHTML=" ";
                
             }
+            reformbuttons=document.getElementById('jumbled-buttons').innerHTML;
 
     }
     
 }
 function fun(bid,bvalue)
 {
-    document.getElementById("formed-sentence").innerHTML="Formed Sentence <span>(after selecting words):</span>";
+     document.getElementById("formed-sentence").innerHTML="Formed Sentence <span>(after selecting words):</span>";
+     document.getElementById("selectedWo").innerHTML +=" "+bvalue;
+     document.getElementById(bid).style.display="none";
+     document.getElementById('reformbutton').innerHTML="<button type='button' class='reform' onclick='reset()' id='reform'>Reform the sentence</button>"
     
-
-    
-    document.getElementById("selectedWo").innerHTML +="   "+bvalue;
-    document.getElementById(bid).style.display="none";
-    
-     
-  
+}
+function reset(){
+    document.getElementById('jumbled-buttons').innerHTML=reformbuttons;
+    document.getElementById('formed-sentence').style.display="none";
+    document.getElementById('selectedWo').style.display="none";
+    document.getElementById('reformbutton').style.display="none";
 }
