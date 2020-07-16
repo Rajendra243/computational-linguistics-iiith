@@ -81,3 +81,16 @@ span{
 #checkcorrect:hover{
     background-color: lightgray;
 }
+#right{
+    font-size:20px;
+    color:green;
+    margin-left:630px;
+    margin-top:50px;
+
+}
+#wrong{
+    font-size:20px;
+    color:red;
+    margin-left:630px;
+    margin-top:50px;
+}
