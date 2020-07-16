@@ -94,3 +94,18 @@ span{
     margin-left:630px;
     margin-top:50px;
 }
+#getcorrect{
+    text-align: center;
+    height:25px;
+    width:200px;  
+    outline:none;
+    margin-top:1px;
+    margin-left:650px;
+    font-weight:lighter;
+    text-align:center;
+    border:1px solid grey;
+    cursor:pointer;
+}
+#getcorrect:hover{
+    background-color: lightgray;
+}

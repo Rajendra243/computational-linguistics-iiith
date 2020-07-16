@@ -174,6 +174,7 @@ function reset(){
     c=0;
     document.getElementById("check").innerHTML="";
     document.getElementById("right").innerHTML="";
+    document.getElementById("answers").innerHTML="";
 }
 let answerKeyValue = ['John ate an apple before afternoon',
 'before afternoon John ate an apple',
@@ -262,7 +263,8 @@ function result(){
    
    var j=0;
    
-     
+    var a=2;
+    var b=3;
        
    
    for(i=0;answerKeyValue.length;i++)
@@ -273,13 +275,20 @@ function result(){
      {
         document.getElementById("right").innerHTML="Right answer!!!";
         document.getElementById("right").style.color="green";
+        document.getElementById("answers").innerHTML="";
         return document.getElementById("right").innerHTML="Right answer!!!";
      }  
-     else{
+     else if(local!=0){
         document.getElementById("right").innerHTML="Wrong answer!!!";
         document.getElementById("right").style.color="red";
+      
+        document.getElementById("answers").innerHTML="<button type='button' id='getcorrect'>Get Correct Sentence</button>"
+     
+        
+        
      }  
     
+    
     }
-
+   
 }
