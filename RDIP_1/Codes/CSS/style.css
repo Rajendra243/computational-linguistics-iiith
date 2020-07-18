@@ -8,7 +8,7 @@
 #container{
     height:800px;
     margin-left:50px;
-    width:1300px;
+    width:1400px;
     background-color:lightgoldenrodyellow;
     box-shadow:10px 10px 10px 10px lightgrey;
 }
@@ -27,4 +27,37 @@ select{
     border-radius:3px;
     width:160px;
 }
-
+#require-text{
+    text-align:center;
+    font-weight:30px;
+     margin-left:19px;
+     margin-right:19px;
+    line-height:49px;
+    font-size:20px;
+    text-align:justify;
+    
+}
+table{
+    margin-left:500px;
+    margin-top:20px;
+    border-collapse:collapse;
+}
+td{
+    border:2px solid grey;
+    height:40px;
+    width:95px;
+    text-align:center;
+    
+}
+#field{
+    width:70px;
+    height:29px;
+}
+#txt{
+    font-size: 18px;
+}
+#msg{
+    font-size:20px;
+    margin-left:420px;
+    margin-top:70px;
+}

@@ -1,7 +1,9 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Experiment-2</title>
       <link rel="stylesheet" href="../CSS/style.css">
+      <script src="../JS/script.js"></script>
     </head>
     <body>
         <p id="he">Tokens and types</p>
@@ -13,6 +15,21 @@
                 <option value="corpus2" id="corpus2">Corpus 2</option>
                 <option value="corpus3" id="corpus3">Corpus 3</option>
         </select>
+        <p id="require-text"></p>
+        <div id="msg"></div>
+        <div id="ttable" style="visibility:hidden;">
+        <table border="border">
+         <tr>
+             <td id="txt">#tokens:</td>
+             <td><input type="text" id="field"></td>
+         </tr>
+         <tr>
+             <td id="txt">#types:</td>
+             <td><input type="text" id="field"></td>
+         </tr>
+          
+        </table>
+        </div>
         </div>
         
     </body>
