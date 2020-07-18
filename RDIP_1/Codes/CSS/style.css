@@ -1,0 +1,30 @@
+#he{
+    font-size:40px;
+    margin-left:10px;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+
+}
+#container{
+    height:800px;
+    margin-left:50px;
+    width:1300px;
+    background-color:lightgoldenrodyellow;
+    box-shadow:10px 10px 10px 10px lightgrey;
+}
+#exp{
+    font-weight:bold;
+    font-size:28px;
+    margin-top:25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left:15px;
+}
+select{
+    margin-left:500px;
+    margin-top:48px;
+    height:30px;
+    outline:none;
+    border-radius:3px;
+    width:160px;
+}
+
