@@ -1,0 +1,37 @@
+1.On clicking Introduction tab - redirecting to Introduction.html
+  (It will give some details about the tokens and types)
+
+2.On clicking Theory tab  - redirecting to Theory.html
+  (Providing the complete theory of experiment)
+
+3.On clicking Objective tab  - redirecting to Objective.html
+
+4.On clicking Experiment tab -redirect to Experiment.html
+   A Dropdown is appeared consists of three options(corpus 1,corpus 2,corpus 3)
+    
+    if SELECTED(corpus 1,corpus 2,corpus 3)
+      i) A paragraph is appeared along with paragraph two types of input fields
+           will appear labeled as tokens and types
+      ii)By understanding the experiment if you enter the number of tokens and types 
+           in number format
+     A SUBMIT button(if click)
+        i) It will check if number of tokens and types are wrong the background of 
+            input field will turn into red
+        ii) If it is right the background of input field will turn into green 
+             and display message will be printed as "Right Answer!!!"
+     if(Right) A CONTINUE button will be appear
+           i)"Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types." is displayed
+            ii)#new types is displayed
+            iv)An input field displayed
+      A SUBMIT button displayed(if click)
+            if(input is correct) CONCEPT BASED ON SNOWBALL STEMMER
+                i)GREEN TEXT "CORRECT Answer " is appeared.
+                ii)input field turns green
+      
+       EXPERIMENT COMPLETES.
+         else
+           i)RED TEXT " WRONG Answer " is appeared.
+           ii) input filed turns red
+  
+5.On clicking Quizzes tab  - redirect to quizzes.html
+6.On clicking Procedure tab - redirect to procedure.html    
