@@ -6,7 +6,13 @@ var requirement3=['A‌ ‌man‌ ‌had‌ ‌a‌ ‌little‌ ‌dog,‌ ‌a
 var wordlength=0;
 
 function selectcorpus(){
-
+   
+    document.getElementById("btn").innerHTML="";
+    document.getElementById("disp1").innerHTML="";
+    document.getElementById("rootmsg").innerHTML="";
+    document.getElementById("resultmsg").innerHTML="";
+    document.getElementById("continue").innerHTML="";
+    
     if(document.getElementById("corpus1").selected)
     {
         document.getElementById("require-text").innerHTML=requirement1;
@@ -57,6 +63,7 @@ function count(){
          document.getElementById("tfield").style.background="green";
          document.getElementById("resultmsg").innerHTML="Right Answer";
          document.getElementById("resultmsg").style.color="green";
+         document.getElementById("continue").innerHTML="<button type='button' onclick='process();' id='ctn'>Continue</button>"
          
      }
    else if(check==wordcount && e!=wordlength)
@@ -79,4 +86,12 @@ function count(){
          document.getElementById("resultmsg").style.color="red";
     }
     
+}
+function process(){
+    document.getElementById("resultmsg").style.visibility="hidden";
+    document.getElementById("continue").style.visibility="hidden";
+    document.getElementById("btn").style.visibility="hidden";
+    document.getElementById("disp1").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.";
+    document.getElementById("rootmsg").innerHTML="#newtypes:"+"<br>"+"<input type='text' id='rootfield'>"
+    document.getElementById("final").innerHTML="<button type='button' id='finalsubmit'>Submit</button>"
 }

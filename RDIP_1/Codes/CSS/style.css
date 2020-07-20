@@ -6,7 +6,7 @@
 
 }
 #container{
-    height:800px;
+    height:1300px;
     margin-left:50px;
     width:1400px;
     background-color:lightgoldenrodyellow;
@@ -78,4 +78,32 @@ td{
     margin-left:520px;
     font-size:30px;
 
+}
+#ctn{
+    margin-left:550px;
+    width:90px;
+    height:25px; 
+    margin-top:10px;
+}
+#disp1{
+    font-size:20px;
+   text-align:center;
+  
+}
+#rootmsg{
+    margin-left:550px;
+    margin-top:24px;
+    font-size:18px;
+}
+#rootfield{
+    width:80px;
+    height:29px;
+    
+}
+#finalsubmit{
+    width:90px;
+    height:25px; 
+    margin-top:-30px;
+    text-align:center;
+    margin-left:550px;
 }
