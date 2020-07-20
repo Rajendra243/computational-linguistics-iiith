@@ -49,9 +49,13 @@ td{
     text-align:center;
     
 }
-#field{
+#wfield{
     width:70px;
     height:29px;
+}
+#tfield{
+    width:70px;
+    height:29px; 
 }
 #txt{
     font-size: 18px;
@@ -60,4 +64,18 @@ td{
     font-size:20px;
     margin-left:420px;
     margin-top:70px;
+}
+#sub{
+    margin-left:550px;
+    width:90px;
+    height:25px;
+    margin-top:29px;
+}
+#sub:hover{
+    cursor:pointer;
+}
+#resultmsg{
+    margin-left:520px;
+    font-size:30px;
+
 }
