@@ -102,7 +102,7 @@ function process(){
     document.getElementById("btn").style.visibility="hidden";
     document.getElementById("disp1").innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.";
     document.getElementById("rootmsg").innerHTML="#newtypes:"+"<br>"+"<input type='text' id='rootfield'>"
-    document.getElementById("final").innerHTML="<button type='button' id='finalsubmit' onclick='check();'>Submit</button>"
+    document.getElementById("final").innerHTML="<button type='button' id='finalsubmit' onclick='check();compare(x)'>Submit</button>"
 }
 
 
@@ -142,6 +142,25 @@ function check(){
     return count;
 }
     
+
     
 }
+function compare(x)
+{
+    if(document.getElementById("rootfield").value=="")
+    {
+        document.getElementById("result").style.color="red";
+        document.getElementById("result").innerHTML="Wrong answer";
+    }
+    else if(document.getElementById("rootfield").value==x)
+    {
+      document.getElementById("result").style.color="green";
+      document.getElementById("result").innerHTML="Right answer";
+    }
+    else{
+        document.getElementById("result").style.color="red";
+        document.getElementById("result").innerHTML="Wrong answer";
+    }
+}
+
    
